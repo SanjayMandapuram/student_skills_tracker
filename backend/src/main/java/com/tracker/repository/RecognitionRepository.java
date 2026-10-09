@@ -1,0 +1,1 @@
+package com.tracker.repository; import com.tracker.entity.Recognition; import java.util.*; import org.springframework.data.jpa.repository.JpaRepository; public interface RecognitionRepository extends JpaRepository<Recognition,Long>{List<Recognition> findByStudentIdOrderByAwardDateDesc(Long studentId);}

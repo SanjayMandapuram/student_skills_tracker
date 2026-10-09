@@ -1,0 +1,14 @@
+**/target/
+**/node_modules/
+backend/data/
+*.mv.db
+*.trace.db
+*.log
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+*.iml
+.DS_Store
+.tools/

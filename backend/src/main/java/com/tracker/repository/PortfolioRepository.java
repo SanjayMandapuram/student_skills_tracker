@@ -1,0 +1,1 @@
+package com.tracker.repository; import com.tracker.entity.Portfolio; import java.util.*; import org.springframework.data.jpa.repository.JpaRepository; public interface PortfolioRepository extends JpaRepository<Portfolio,Long>{Optional<Portfolio> findByUserId(Long userId); Optional<Portfolio> findByPublicSlugAndPublicEnabled(String slug,boolean enabled);}

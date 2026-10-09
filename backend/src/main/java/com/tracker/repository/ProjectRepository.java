@@ -1,0 +1,1 @@
+package com.tracker.repository; import com.tracker.entity.Project; import java.util.*; import org.springframework.data.jpa.repository.JpaRepository; public interface ProjectRepository extends JpaRepository<Project,Long>{List<Project> findByUserIdOrderByCompletedDateDesc(Long userId); Optional<Project> findByIdAndUserId(Long id,Long userId);}

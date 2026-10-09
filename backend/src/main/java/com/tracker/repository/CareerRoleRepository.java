@@ -1,0 +1,1 @@
+package com.tracker.repository; import com.tracker.entity.CareerRole; import java.util.*; import org.springframework.data.jpa.repository.JpaRepository; public interface CareerRoleRepository extends JpaRepository<CareerRole,Long>{Optional<CareerRole> findByNameIgnoreCase(String name);}

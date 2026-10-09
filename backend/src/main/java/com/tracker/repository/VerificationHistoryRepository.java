@@ -1,0 +1,1 @@
+package com.tracker.repository; import com.tracker.entity.VerificationHistory; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface VerificationHistoryRepository extends JpaRepository<VerificationHistory,Long>{List<VerificationHistory> findAllByOrderByVerifiedAtDesc();}

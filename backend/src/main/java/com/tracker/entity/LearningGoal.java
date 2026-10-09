@@ -1,0 +1,4 @@
+package com.tracker.entity;
+import com.fasterxml.jackson.annotation.JsonIgnore; import jakarta.persistence.*; import jakarta.validation.constraints.*; import lombok.*; import java.time.*;
+@Entity @Table(name="learning_goals") @Getter @Setter @NoArgsConstructor
+public class LearningGoal { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @NotBlank @Size(max=180) private String title; @Size(max=2000) private String description; @Size(max=150) private String targetSkill; @Size(max=150) private String targetCareer; @NotNull private LocalDate startDate; @NotNull private LocalDate targetDate; @Min(0) @Max(100) private Integer progress=0; @Size(max=30) private String status="ACTIVE"; private LocalDateTime completedAt; @ManyToOne(optional=false) @JoinColumn(name="user_id") @JsonIgnore private User user; }

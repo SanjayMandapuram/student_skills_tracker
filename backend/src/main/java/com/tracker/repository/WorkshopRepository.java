@@ -1,0 +1,1 @@
+package com.tracker.repository; import com.tracker.entity.Workshop; import java.util.*; import org.springframework.data.jpa.repository.JpaRepository; public interface WorkshopRepository extends JpaRepository<Workshop,Long>{List<Workshop> findByStatusOrderByStartAtAsc(String status);List<Workshop> findByFacultyIdOrderByStartAtDesc(Long facultyId);}

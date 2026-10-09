@@ -1,0 +1,2 @@
+-- Demo users are seeded by DataInitializer so passwords are BCrypt-hashed.
+-- Set seed account passwords through environment variables; do not commit credentials.

@@ -1,0 +1,3 @@
+package com.tracker.repository;
+import com.tracker.entity.StudentAchievement; import java.util.*; import org.springframework.data.jpa.repository.JpaRepository;
+public interface StudentAchievementRepository extends JpaRepository<StudentAchievement,Long>{List<StudentAchievement> findByUserIdOrderByAwardedAtDesc(Long userId);boolean existsByUserIdAndCode(Long userId,String code);@org.springframework.data.jpa.repository.Query("select coalesce(sum(a.points),0) from StudentAchievement a where a.user.id=:userId")long sumPointsByUserId(@org.springframework.data.repository.query.Param("userId") Long userId);}
